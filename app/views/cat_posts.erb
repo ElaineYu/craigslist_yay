@@ -1,0 +1,17 @@
+<div class="container">
+  <h1><%= @cat %></h1>
+
+  <% @posts.each do |item| %>
+    <a href=""><%= item.title %> </a>&nbsp&nbsp (Location: <%= item.location %>) 
+    <br>
+    <!-- <p><%= item.description %></p>
+    <p>
+      <br>
+      Prizzzzze: <%= item.price %><br>
+      Email: <%= item.email %></p> -->
+
+  <br>
+  <% end %>
+
+
+</div>
