@@ -1,5 +1,5 @@
 <div class="container">
-  <form class="creator" action="/<%= @cat.name %>/<%=@item.id %>/edit" method ="POST">
+  <form class="creator" action="/<%= @cat.first.name %>/<%=@item.id %>/edit" method ="POST">
     <label> Title <input type="text" name="title" value="<%=@item.title %>"></label><br>
     <!-- create post text -->
     <label> Description <input type="text" name="description" value="<%=@item.description %>"></label><br>

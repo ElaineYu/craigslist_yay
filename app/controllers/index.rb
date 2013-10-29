@@ -40,11 +40,7 @@ end
 post '/:cat_name' do
     @cat = Category.where("name = ?", params[:cat_name]) # category object
 
-    Category.where("name = ?", @cat.first.name)[0].posts << Post.create(title: params[:title], 
-                                                            description: params[:description], 
-                                                            location: params[:location], 
-                                                            price: params[:price], 
-                                                            email: params[:email])
+    Category.where("name = ?", @cat.first.name)[0].posts << Post.create(params[:post])
     @posts = Post.where("category_id = ?", @cat_id).all # all dem posts where...
 
     redirect to("/#{@cat.first.name}")
@@ -64,15 +60,14 @@ end
 
 post '/:cat_name/:item_id/edit' do
     @item = Post.find(params[:item_id])
+    puts params[:cat_name]
     @cat = Category.where("name = ?", params[:cat_name]) # category object
     @item.update_attributes(title: params[:title],
                             description: params[:description],
                             location: params[:location],
                             price: params[:price],
                             email: params[:email])
-    @posts = Post.where("category_id = ?", @cat_id).all # all dem posts where...
-
-    redirect to("/#{@cat.first}")
+    redirect to("/#{@cat.first.name}")
 end
 
 get '/:cat_name/:item_id/delete' do

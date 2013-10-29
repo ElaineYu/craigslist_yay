@@ -1,11 +1,11 @@
 <div class="container">
   <form class="creator" action="/<%= @cat.name %>" method ="POST">
-    <label> Title <input type="text" name="title" placeholder="title"></label><br>
+    <label> Title <input type="text" name="post[title]" placeholder="title"></label><br>
     <!-- create post text -->
-    <label> Description <input type="text" name="description" placeholder="description"></label><br>
-    <label> Location <input type="text" name="location" placeholder="location"></label><br>
-    <label> Price <input type="text" name="price" placeholder="price"></label><br>
-    <label> Email <input type="text" name="email" placeholder="email"></label>
+    <label> Description <input type="text" name="post[description]" placeholder="description"></label><br>
+    <label> Location <input type="text" name="post[location]" placeholder="location"></label><br>
+    <label> Price <input type="text" name="post[price]" placeholder="price"></label><br>
+    <label> Email <input type="text" name="post[email]" placeholder="email"></label>
     
     <!-- Button -->
     
