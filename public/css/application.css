@@ -3,7 +3,35 @@
   width: 600px;
   padding: 0px 20px 20px 20px;
   border: 1px dotted black;
+  background-color: tomato;
+  color: white;
+  box-shadow: 5px 5px 15px black;
 }
 th {
   text-align: left;
+}
+
+.creator {
+  padding: 15px;
+}
+
+input {
+  margin: 0 0 15px 0;
+  color: white;
+  background-color: teal;
+}
+
+a {
+  color: blue;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+  color: yellow;
+}
+
+h1 {
+  padding: 0 0 15px 0;
 }

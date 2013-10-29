@@ -1,8 +1,9 @@
 <div class="container">
-  <h1><%= @cat %></h1>
+  <h1><%= @cat.first.name.capitalize %></h1> <a href="<%= @cat.first.name %>/create_post" > CREATE A POST </a><br><br>
 
-  <% @posts.each do |item| %>
-    <a href=""><%= item.title %> </a>&nbsp&nbsp (Location: <%= item.location %>) 
+
+  <% @posts.reverse.each do |item| %>
+    <a href="/<%=@cat.first.name%>/<%= item.id %>"><%= item.title %></a>&nbsp&nbsp (Location: <%= item.location %>) 
     <br>
     <!-- <p><%= item.description %></p>
     <p>
@@ -13,5 +14,7 @@
   <br>
   <% end %>
 
+
+<a href="/" > HOME </a>
 
 </div>
